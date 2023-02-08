@@ -4,13 +4,22 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
     <title>{{title}}</title>
 </head>
 <body>
-    <h1>List of Orders</h1>
+    
+    <div>
+        <h1>List of Orders</h1>
+        <div class="order_list">
         {%for order in orders%}
-         <a href='order/{{order.order_number}}'>Order {{order.order_number}}</a> <br>
+        
+        <img src="../static/delivery-icon-transparent-background-shipping-cost-ico-11562852302e3mtlf1bfz.png" alt=""> <a href='order/{{order.order_number}}'>Order {{order.order_number}}</a> <br>
         {%endfor%}
+        </div>
+        
+    </div>
+    <img src="../static/daunt-books-london-unsplash.avif" alt="">
        
     
     
